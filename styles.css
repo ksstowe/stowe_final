@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Copse');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    
+
+    font-family: Copse,Verdana, serif;
+    text-align: center;
+    font-size: 22px;
+    color: #314259;
+   
+
+}
+#grid-container{
+    width: 1280px;
+    margin: 50px;
+}
+
+html{
+    
+    background-color: #c2d9bf;
+    background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+main{
+    display: grid;
+    grid-template-columns: 900px 900px ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      
+      " intro  image  "
+      " cater  cater  "
+      " local  local  "
+      "  chef   chef  ";
+      
+  }
+header{
+    border: 6px groove #040926;
+    background-color: #314259;
+    line-height: 60px;
+    text-align: center;
+    
+ }
+p{
+    text-align: center;    
+    margin: 50px;
+
+}
+
+#intros{
+    grid-area: intro;
+    align-self: center;
+ }
+main img{
+    grid-area: image;
+    width:100%;
+    height: auto;
+    border: 3px solid #314259;
+    
+ }
+.head-image{
+    border-radius: 15px;
+    
+ }
+.contact-image{
+    width:75%;
+    padding-top: 17px;
+    border:none;
+ }
+form{
+	width: 350px;
+	margin: 16px auto;
+	background-color: #314259;
+	padding:16px;
+	color: white;
+    font-size: 16px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+	border-radius: 5px;
+}
+input, label, select, textarea{
+	display:block;
+	width: 100%;
+}
+
+input,select, textarea{
+	padding: 10px;
+	font-size: 1rem;
+	margin-bottom: 24px;
+	border-radius: 4px;
+	border: 1px inset #314259;
+}
+
+fieldset{
+	margin-bottom: 24px;
+	border-radius: 4px;
+	border-color: #363432;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 8px 0;
+}
+
+fieldset label{
+	margin-left: 0;
+}
+input[type=submit]{
+	background-color: #F25E3D;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+    border-radius: 8px;
+	box-shadow: -5px 6px 10px #363432;
+}
+
+input:invalid, select:invalid, textarea:invalid{
+	border: 4px solid #F25E3D;
+}
+
+input:focus, select:focus, textarea:focus{
+	outline: 3px solid #314259;
+}
+input[type=reset]{
+    background-color: #F28241;
+    color:#314259;
+    font-weight: bold;
+}
+input[type=reset]:focus{
+	outline: 3px solid #F25E3D;
+}
+
+input[type=reset]:hover{
+	box-shadow: -3px 3px 5px #363432;
+}
+input[type=submit]:focus{
+	outline: 3px solid #F25E3D;
+}
+input[type=submit]:hover{
+	box-shadow: -3px 3px 5px #363432;
+}
+
+input[type=radio] + label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+input[type=radio] {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 0;
+    border-radius: 0;
+}
+input[type=radio] + label::before {
+    content: "\00a0";  
+    font-size: 2.25em;
+    line-height: 0.65;
+    border-radius: 50%;
+    display: inline-block;  
+    height: 20px;
+    width: 22px;
+    text-align: center;
+    margin-right: 16px;
+    border: 2px solid white;   
+    background-color: #fff;
+    padding-bottom: 2px;
+}
+
+input[type=radio]:checked + label::before {
+    content: "\2022";
+    color: #fff;
+    background: #314259;
+}
+
+input[type=radio]:focus{
+    outline: none;
+}
+
+input[type=radio]:focus + label::before {
+    box-shadow: 0 0 0 3px #314259;
+}
+
+#caters {
+    grid-area: cater;
+ }
+#locals {
+    grid-area: local;
+ }
+#chefs {
+    grid-area: chef;
+ }
+ 
+h1{
+    text-shadow: 5px 2px 1px black, 2px 2px 1px black;
+    color:#F25E3D;
+    text-align: center;
+ }
+ 
+h1 a:link,h1 a:visited {
+    text-decoration: none;
+    color: #D13B32;
+}
+h2{
+    align-self: center;
+ }
+
+nav{
+	padding: 0.1rem 0;
+    
+}
+nav li{
+	list-style-type: none;
+	display: inline-block;
+    text-align: center;
+   
+}
+nav ul {
+    display: grid;
+    grid-template-columns: 400px 400px 400px 400px;
+    gap: 0.5rem;
+}
+nav a{
+	text-decoration-color: #040926;
+	color: #040926;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 1em;
+}
+nav a:active{
+    background-color:#F25E3D;
+}
+a:hover {
+    color:#F25E3D;
+  }
+h2,h3{
+    text-align: center;
+}
+.center{
+    width:100%;
+    margin-top:50px;
+    margin-bottom: 50px;
+    margin-right: 500px;
+    margin-left: 500px;
+  }
+
+footer{
+    background-color: #314259;
+    grid-area: footer;
+    color: #F25E3D;
+    padding-top:5px;
+    padding-bottom: 5px;
+ }
+footer p{
+    margin:20px;
+ }
